@@ -1,0 +1,10 @@
+Create go.mod and install dependency 
+$ go mod init
+$ go get -u github.com/gin-gonic/gin
+$ go get go.mongodb.org/mongo-driver
+
+Mkdir for project, create main.go
+$ mkdir controllers, services, models
+
+Create models, services, controllers
+- When import go.mongodb, should also import bson from mongo-driver
