@@ -39,6 +39,8 @@ func init() {
 	fmt.Println("Mongo connection established")
 
 	usercollection = mongoclient.Database("userdb").Collection("users")
+	//Ối dồi ôi thiếu
+	userservice = services.NewUserService(usercollection, ctx)
 	usercontroller = controllers.New(userservice)
 	server = gin.Default()
 }

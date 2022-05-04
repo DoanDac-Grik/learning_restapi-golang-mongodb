@@ -41,6 +41,8 @@ func (u *UserServiceImpl) GetAll() ([]*models.User, error) {
 	}
 	for cursor.Next(u.ctx) {
 		var user models.User
+		//Ối dồi ôi thiếu
+		err := cursor.Decode(&user)
 		if err != nil {
 			return nil, err
 		}
